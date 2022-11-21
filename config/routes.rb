@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+  get "/companies" => "companies#index"
+  get "/companies/:id" => "companies#show"
+  post "/companies" => "companies#create"
+
   get "/signup" => "users#new"
   post "/users" => "users#create"
 
@@ -7,4 +12,5 @@ Rails.application.routes.draw do
   post "/sessions" => "sessions#create"
   get "/logout" => "sessions#destroy"
   resources :jobs
+
 end
