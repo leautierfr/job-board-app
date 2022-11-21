@@ -26,4 +26,13 @@ class CompaniesController < ApplicationController
     @company.destroy
     render json: { message: "company deleted" }
   end
+
+  def update
+    @company = Company.find_by(id: params[:id])
+    @company.name = params[:name] || @company.name
+    @company.logo = params[:logo] || @company.logo
+    @company.description = params[:description] || @company.description
+    @company.save
+    render json: product.as_json
+  end
 end
