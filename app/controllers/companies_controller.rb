@@ -1,6 +1,6 @@
 class CompaniesController < ApplicationController
   def show
-    @company = Companies.find_by(params: id)
+    @company = Company.find_by(params: id)
     render :show
   end
 
@@ -22,7 +22,7 @@ class CompaniesController < ApplicationController
   end
 
   def destroy
-    @company = Companies.find_by(company_id: params["id"])
+    @company = Company.find_by(company_id: params["id"])
     @company.destroy
     render json: { message: "company deleted" }
   end
