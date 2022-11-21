@@ -1,0 +1,12 @@
+<h1>Job info</h1>
+<h2><%= @job.title %></h2>
+<p>Company ID: <%= @job.company_id %></p>
+<p>Description: <%= @job.description %></p>
+<p>URL: <%= @job.url %></p>
+<p>Location: <%= @job.location %></p>
+<p>Active: <%= @job.active %></p>
+<p>Salary_Range: <%= @job.salary_range %></p>
+<a href="/jobs">Back to all jobs</a>
+
+<%= link_to "Edit job", edit_job_path(@job) %>
+<%= link_to "Destroy job", job_path(@job), data: {turbo_method: :delete} %>
