@@ -18,7 +18,7 @@ class JobsController < ApplicationController
     @job = Job.new(
       title: params[:job][:title],
       company_id: params[:job][:company_id],
-      description: params[:job][:height],
+      description: params[:job][:description],
       url: params[:job][:url],
       location: params[:job][:location],
       active: params[:job][:active],
