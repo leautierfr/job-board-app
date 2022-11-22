@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+
 Company.create(name: "Costco", logo: "https://1000logos.net/wp-content/uploads/2017/08/Font-Costco-Logo.jpg", description: "big-box retail store")
 Company.create(name: "Lidl", logo: "https://en.wikipedia.org/wiki/Lidl#/media/File:Lidl-Logo.svg", description: "discount retail store")
 Company.create(name: "McDonald's", logo: "https://en.wikipedia.org/wiki/McDonald%27s#/media/File:McDonald's_Golden_Arches.svg", description: "fast food restaurant")
