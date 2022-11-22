@@ -12,4 +12,6 @@ Company.create(name: "McDonald's", logo: "https://en.wikipedia.org/wiki/McDonald
 
 Job.create(company_id: 1, title: "cashier", description: "handle customer purchases", url: "https://en.wikipedia.org/wiki/Cashier", location: "Washington", active: "open", salary_range: 15000-20000)
 Job.create(company_id: 2, title: "manager", description: "assist and direct multiples employees", "url:https://en.wikipedia.org/wiki/Management", location: "New York", active: "open", salary_range: 15000-20000)
+
 Job.create(company_id: 2, title: "cook", description: "cook meals for customers", active: "open", salary_range: 20000-25000)
+
