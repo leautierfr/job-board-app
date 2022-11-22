@@ -21,10 +21,6 @@
     <%= form.text_field :location %>
   </div>
   <div>
-    <%= form.label :active %>
-    <%= form.text_field :active %>
-  </div>
-  <div>
     <%= form.label :salary_range %>
     <%= form.text_field :salary_range %>
   </div>
@@ -32,3 +28,5 @@
     <%= form.submit %>
   </div>
 <% end%>
+
+<%= link_to "Go Back to Jobs", @job %>
