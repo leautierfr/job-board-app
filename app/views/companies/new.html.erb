@@ -1,0 +1,17 @@
+<h1>New Job</h1>
+<%= form_with model: @company do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+  <div>
+    <%= form.label :logo %>
+    <%= form.text_field :logo %>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end%>

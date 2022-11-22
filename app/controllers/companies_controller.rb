@@ -1,12 +1,12 @@
 class CompaniesController < ApplicationController
   def show
-    @company = Company.find_by(params: id)
-    render :show
+    @company = Company.find_by(id: params[:id])
+    render template: "companies/show"
   end
 
   def index
-    @company = Company.all
-    render json: @company.as_json
+    @companies = Company.all
+    render template: "companies/index"
   end
 
   def create
@@ -18,7 +18,7 @@ class CompaniesController < ApplicationController
     )
 
     @company.save
-    render json: @company.as_json
+    redirect_to template: "/companies"
   end
 
   def destroy
@@ -33,6 +33,6 @@ class CompaniesController < ApplicationController
     @company.logo = params[:logo] || @company.logo
     @company.description = params[:description] || @company.description
     @company.save
-    render json: product.as_json
+    render template: "companies/new"
   end
 end

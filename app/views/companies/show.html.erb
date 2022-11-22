@@ -1,0 +1,11 @@
+<h1><%= @company.name %></h1>
+<p>Company ID: <%= @company.id %></p>
+<p>logo: <%= @company.logo %></p>
+<p>Description: <%= @company.description %></p>
+<h1>Jobs: <% @company.jobs.each do |job| %></h1>
+  <h2><%= job.title %></h2>
+  <p><%= job.description %></p>
+  <p><%= job.location %></p>
+<% end %>
+
+

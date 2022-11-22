@@ -6,4 +6,6 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-job = Job.create(company_id: 1, title: "Fisherman", description: "catches fish", url: "https://en.wikipedia.org/wiki/Fisherman", location: "Alaska", active: true, salary_range: "45000")
+company = Company.create(name: "google", logo: "blue", description: "program")
+
+job = Job.create(company_id: 2, title: "Frycook", description: "catches fish in a suit", url: "https://www.amazon.com/fisherman-costume/s?k=fisherman+costume", location: "Alaska in a suit", active: true, salary_range: "55000")
