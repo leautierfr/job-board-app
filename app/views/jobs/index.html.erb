@@ -1,6 +1,7 @@
 <form id="form"> 
-  <input type="search" id="query" name="q" placeholder="Search Tags...">
+  <input type="search" id="query" name="q" placeholder="Search a tag">
   <button>Search</button>
+  <%Job.all.where(tag: params[:tags])%>
 </form>
 
 <h1>All jobs</h1>
