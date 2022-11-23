@@ -57,6 +57,7 @@ class JobsController < ApplicationController
     job = Job.find_by(id: params[:id])
     job.active = "Closed"
     job.save
+    
     redirect_to "/jobs", status: :see_other
   end
 end
