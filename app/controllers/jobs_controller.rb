@@ -40,13 +40,13 @@ class JobsController < ApplicationController
   def update
     @job = Job.find_by(id: params[:id])
     
-    @job.title = params[:job][:title],
-    @job.company_id = params[:job][:company_id],
-    @job.description = params[:job][:description],
-    @job.url = params[:job][:url],
-    @job.location = params[:job][:location],
-    @job.active = params[:job][:active],
-    @job.salary_range = params[:job][:salary_range],
+    @job.title = params[:job][:title]
+    @job.company_id = params[:job][:company_id]
+    @job.description = params[:job][:description]
+    @job.url = params[:job][:url]
+    @job.location = params[:job][:location]
+    @job.active = params[:job][:active]
+    @job.salary_range = params[:job][:salary_range]
     @job.tags = params[:job][:tags]
   
     @job.save
