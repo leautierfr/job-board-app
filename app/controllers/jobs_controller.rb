@@ -3,7 +3,7 @@ class JobsController < ApplicationController
   before_action :authenticate_admin, except: [:index, :show]
 
   def index
-    @jobs = Job.all
+    @jobs = Job.all.where(active: "Open")
     render template: "jobs/index"
   end
 
@@ -26,6 +26,7 @@ class JobsController < ApplicationController
       location: params[:job][:location],
       active: "Open",
       salary_range: params[:job][:salary_range],
+      tags: params[:job][:tags]
     )
     @job.save
     redirect_to "/jobs"
@@ -46,6 +47,7 @@ class JobsController < ApplicationController
     @job.location = params[:job][:location],
     @job.active = params[:job][:active],
     @job.salary_range = params[:job][:salary_range],
+    @job.tags = params[:job][:tags]
   
     @job.save
     redirect_to "/jobs"
